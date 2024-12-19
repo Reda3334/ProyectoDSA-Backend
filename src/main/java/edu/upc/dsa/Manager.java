@@ -52,6 +52,9 @@ public interface Manager {
     boolean validateToken(String username, String token);
     void deleteToken(String username);
 
+    //Level related
+    //List<Object> getObjectPosition(String LevelID) throws SQLException;
+
     //Clear and Size of lists used (Users & StoreObjects)
     int sizeUsers();
     int sizeObjects();

@@ -9,6 +9,7 @@ import edu.upc.dsa.util.PasswordUtils;
 import org.apache.log4j.Logger;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
@@ -195,7 +196,14 @@ public class DAO implements Manager {
     public List<StoreObject> findAllObjects() throws SQLException{
         return session.findAll(StoreObject.class);
     }
-
+/*
+    @Override
+    public List<Object> getObjectPosition(String LevelID) throws SQLException{
+        Properties properties = session.get(Properties.class,LevelID);
+        Coordinates coord = new Coordinates(properties.getX(),properties.getY());
+        return null;
+    }
+*/
     @Override
     public UserToken generateToken(String userID) {
         UserToken token = new UserToken();
